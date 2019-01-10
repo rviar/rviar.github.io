@@ -555,10 +555,9 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
 
 .carousel__item-icon {
   position: absolute;
-  bottom: 10%;
+  top: 50%;
   left: 50%;
-  -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+  transform: translate3d(-50%, -50%, 0);
   width: 35%;
   height: auto;
   z-index: 2;
