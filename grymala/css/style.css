@@ -688,6 +688,7 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
   }
   .header__item {
     position: relative;
+    line-height: 66px;
   }
   .header__item:hover {
     background-color: transparent;
@@ -700,7 +701,7 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
   }
   .nav-underline {
     position: absolute;
-    height: 5px;
+    height: 2px;
     background: #000;
     transition: width 0.3s ease;
   }
