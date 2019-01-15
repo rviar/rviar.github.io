@@ -593,15 +593,15 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
 .carousel__button-play {
   position: absolute;
   padding: 0;
-  width: 50px;
-  height: 50px;
-  top: 50%;
+  width: 70px;
+  height: 70px;
+  bottom: 12%;
   left: 50%;
-  -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-  border: none;
+  -ms-transform: translate(-50%);
+      transform: translate(-50%);
+  border: 2px solid #fff;
   border-radius: 50%;
-  background-color: rgba(200, 200, 200, 0.75);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 10;
   cursor: pointer;
 }
@@ -617,8 +617,8 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
   height: 0;
   top: 50%;
   left: 65%;
-  border: 12px solid transparent;
-  border-left: 16px solid rgba(255, 255, 255, 0.8);
+  border: 15px solid transparent;
+  border-left: 20px solid white;
   -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
 }
@@ -906,6 +906,15 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
   }
   .carousel__item-icon {
     border-radius: 20px;
+  }
+  .carousel__button-play {
+    width: 50px;
+    height: 50px;
+  }
+  .carousel__button-play:before {
+    left: 67%;
+    border: 12px solid transparent;
+    border-left: 16px solid white;
   }
 }
 
