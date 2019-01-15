@@ -82,7 +82,7 @@
       const videos = document.getElementsByClassName('carousel__item-video');
 
       for (var i = 0; i < videos.length; i++) {
-        videos[i].onloadedmetadata = function () {
+        videos[i].oncanplay = function () {
           var i = parseInt($(this).attr('id').split('-').pop());
           var button = document.createElement('button');
 
@@ -285,81 +285,21 @@
 
     // Menu underline
 
-    // function activateUnderlineMenu() {
-    //   $('.nav-underline').css('width', '25%');
-    //   var navHeight = $('.header').outerHeight() + 50;
-    //   var scrollHeight = document.body.scrollHeight + document.documentElement.clientHeight;
-    //
-    //   var menuWidth = $('#nav-menu').outerWidth();
-    //   var menuItemWidth;
-    //   var menuItems = $('#nav-menu').find('a');
-    //
-    //   var scrollItems = menuItems.map(function(){
-    //     var item = $($(this).attr('data-target'));
-    //     if (item.length) { return item; }
-    //   });
-    //
-    //   var lastId;
-    //
-    //   $(window).on('scroll', function (e) {
-    //     // Get container scroll position
-    //     var fromTop = $(this).scrollTop();
-    //
-    //     // Get id of current scroll item
-    //     var cur = scrollItems.map(function(){
-    //       console.log($(this).offset().top);
-    //       if ($(this).offset().top - navHeight - 1 < fromTop)
-    //         return this;
-    //     });
-    //     // Get the id of the current element
-    //     cur = cur[cur.length-1];
-    //     var id = cur && cur.length ? cur[0].id : "";
-    //
-    //     if (lastId !== id) {
-    //       lastId = id;
-    //       // Set/remove active class
-    //       menuItemWidth = menuItems.filter('[data-target="#'+id+'"]').parent().outerWidth();
-    //       $('.nav-underline').css('width', menuItemWidth + 'px');
-    //     }
-    //
-    //     //console.log(menuWidth);
-    //
-    //     var left = ($(this).scrollTop() / scrollHeight) * 100;
-    //
-    //     var endLeft = Math.ceil(((menuItemWidth / menuWidth) * 100));
-    //
-    //     left = left + endLeft < 100 ? left : 100 - endLeft;
-    //     $('.nav-underline').css('left', left + '%');
-    //   }).trigger('scroll');
-    // }
-
     function activateUnderlineMenu() {
       var navHeight = $('.header').outerHeight();
-      var menuItemWidth;
       var nav = $('#nav-menu');
       var sections = $('section');
-
-      // var prevScrollTop = 0;
-
-      var left = 0;
-
       var underlineWidth;
 
       $(window).on('scroll', function (e) {
         var fromTop = $(this).scrollTop();
 
-        // var direction = fromTop > prevScrollTop ? 'down' : 'up';
-        // prevScrollTop = fromTop;
-        menuItemWidth = 100;
-
-        // Get id of current scroll item
         sections.each(function(index) {
           var sectionHeight = $(this).outerHeight();
           var top = $(this).offset().top - navHeight * 1.5;
           var bottom = top + sectionHeight;
           if (fromTop >= top && fromTop <= bottom) {
             var active = nav.find('a[data-target="#'+$(this).attr('id')+'"]');
-            console.log(active);
             var activeUnderline = active.siblings('.nav-underline');
 
             underlineWidth = active.parent().outerWidth();
