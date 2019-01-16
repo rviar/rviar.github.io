@@ -55,7 +55,6 @@
       var indexFrom = swiper.activeIndex;
 
       if (indexFrom !== indexTo) {
-        // $('.swiper-wrapper').css('transition-timing-function', 'linear');
         var nextSlide = function () {
           clearTimeout(timeoutCarousel);
           if (swiper.activeIndex !== indexTo) {
@@ -83,13 +82,8 @@
 
       for (var i = 0; i < videos.length; i++) {
         videos[i].onloadedmetadata = function () {
-          var i = parseInt($(this).attr('id').split('-').pop());
-          var button = document.createElement('button');
-
-          button.setAttribute('id', 'play-button-' + i);
-          button.classList.add('carousel__button-play');
-          button.classList.add('carousel__button-play_hide');
-          document.getElementsByClassName('carousel__video-wrapper')[i].appendChild(button);
+          var i = parseInt(this.getAttribute('id').split('-')[1]);
+          this.parentNode.querySelector('#play-button-' + i).setAttribute('data-can-play', true);
 
           // show the first (central) play-button
           if (i === swiper.activeIndex) {
@@ -114,9 +108,11 @@
     }
 
     function _showButtonById(id) {
-      document.getElementById('play-button-' + id).classList.remove('carousel__button-play_hide');
+      var button = document.getElementById('play-button-' + id);
+      if (!!button.getAttribute('data-can-play') === true) {
+        button.classList.remove('carousel__button-play_hide');
+      }
     }
-
     function _playVideoById(id, i) {
       var video = document.getElementById(id);
       video.style.display = 'block';
