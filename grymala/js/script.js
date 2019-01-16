@@ -81,9 +81,14 @@
       const videos = document.getElementsByClassName('carousel__item-video');
 
       for (var i = 0; i < videos.length; i++) {
-        videos[i].onloadedmetadata = function () {
-          var i = parseInt(this.getAttribute('id').split('-')[1]);
-          this.parentNode.querySelector('#play-button-' + i).setAttribute('data-can-play', true);
+        videos[i].addEventListener('loadedmetadata', function () {
+          var i = parseInt(this.getAttribute('id').split('-').pop());
+
+          var button = document.createElement('button');
+          button.setAttribute('id', 'play-button-' + i);
+          button.classList.add('carousel__button-play');
+          button.classList.add('carousel__button-play_hide');
+          document.getElementsByClassName('carousel__video-wrapper')[i].appendChild(button);
 
           // show the first (central) play-button
           if (i === swiper.activeIndex) {
@@ -91,7 +96,7 @@
           }
 
           _addPlayClickListener();
-        };
+        });
       }
     }
 
@@ -108,11 +113,9 @@
     }
 
     function _showButtonById(id) {
-      var button = document.getElementById('play-button-' + id);
-      if (!!button.getAttribute('data-can-play') === true) {
-        button.classList.remove('carousel__button-play_hide');
-      }
+      document.getElementById('play-button-' + id).classList.remove('carousel__button-play_hide');
     }
+
     function _playVideoById(id, i) {
       var video = document.getElementById(id);
       video.style.display = 'block';
