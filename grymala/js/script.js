@@ -82,7 +82,7 @@
       const videos = document.getElementsByClassName('carousel__item-video');
 
       for (var i = 0; i < videos.length; i++) {
-        videos[i].oncanplay = function () {
+        videos[i].onloadedmetadata = function () {
           var i = parseInt($(this).attr('id').split('-').pop());
           var button = document.createElement('button');
 
