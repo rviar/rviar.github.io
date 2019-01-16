@@ -82,7 +82,6 @@
 
       for (var i = 0; i < videos.length; i++) {
         videos[i].addEventListener('loadedmetadata', function () {
-          console.log(this);
           var i = parseInt(this.getAttribute('id').split('-').pop());
 
           var button = document.createElement('button');
