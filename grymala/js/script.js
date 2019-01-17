@@ -174,7 +174,7 @@
     sidenavInstance = M.Sidenav.getInstance(sidenav);
     _sidenavToggleHandler(sidenavToggler);
 
-    $('.header__item').click(function () {
+    $('.header__item, .footer-block__item').click(function () {
       $('.sidenav').sidenav('close');
       var target = $(this)[0].dataset.target;
 

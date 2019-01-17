@@ -446,6 +446,7 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
 }
 
 .footer-block__item {
+  cursor: pointer;
   font-family: 'Helvetica Neue Cyr Light';
 }
 
