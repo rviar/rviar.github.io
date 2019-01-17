@@ -287,6 +287,7 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
 .index-video-block {
   position: relative;
   height: 570px;
+  opacity: 0;
 }
 
 .index-video-block__video {
