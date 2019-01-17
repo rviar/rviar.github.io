@@ -174,16 +174,24 @@
     sidenavInstance = M.Sidenav.getInstance(sidenav);
     _sidenavToggleHandler(sidenavToggler);
 
+    function _scrollTo(target, speed) {
+      $('html, body').stop(true, true).animate({
+        scrollTop: $(target).offset().top - $('.header').outerHeight(),
+      }, speed || 1000);
+
+      // remove hash
+      window.location.hash = '';
+    }
+
     $('.header__item, .footer-block__item').click(function () {
+
       $('.sidenav').sidenav('close');
       var target = $(this)[0].dataset.target;
 
       if (window.location.pathname === '/policy.html') {
         window.location.href = window.location.origin + target;
       } else {
-        $('html, body').stop(true, true).animate({
-          scrollTop: $(target).offset().top - $('.header').outerHeight(),
-        }, 1000);
+        _scrollTo(target);
       }
     });
 
@@ -284,7 +292,7 @@
 
     // Menu underline
 
-    function activateUnderlineMenu() {
+    function _activateUnderlineMenu() {
       var navHeight = $('.header').outerHeight();
       var nav = $('#nav-menu');
       var sections = $('section');
@@ -319,7 +327,9 @@
       }).trigger('scroll');
     }
 
-    activateUnderlineMenu();
+    _activateUnderlineMenu();
+
+    _scrollTo(window.location.hash, 5);
 
   });
 

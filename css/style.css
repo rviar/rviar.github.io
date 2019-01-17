@@ -196,27 +196,17 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
   margin-bottom: 20px;
 }
 
-.about-us-block__btn {
+.about-us-block__title {
   height: 43px !important;
   line-height: 46px !important;
   width: 211px;
   border-radius: 5px !important;
   font-family: 'Helvetica Neue Cyr Medium';
   font-size: 22px !important;
+  font-weight: bold;
+  color: #000;
   text-transform: none !important;
   opacity: 0;
-}
-
-.passion__btn {
-  background: linear-gradient(270deg, #05c6c0, #03e58e);
-}
-
-.experience__btn {
-  background: linear-gradient(270deg, #875bfe, #4f9efd);
-}
-
-.knowledge__btn {
-  background: linear-gradient(270deg, #ff8d81, #ffc784);
 }
 
 .about-us-block__info {
@@ -286,7 +276,7 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
 
 .index-video-block {
   position: relative;
-  height: 570px;
+  height: 700px;
   opacity: 0;
 }
 
@@ -295,14 +285,14 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
   border-radius: 20px;
   width: 270px;
   left: 50%;
-  top: 48%;
+  top: 47%;
   transform: translate3d(-50%, -50%, 0);
 }
 
 .index-video-block__frame {
   position: absolute;
   width: 320px;
-  height: 565px;
+  height: 620px;
   left: 50%;
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
