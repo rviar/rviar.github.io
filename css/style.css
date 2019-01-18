@@ -191,9 +191,10 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
   padding: 0 20px;
 }
 
-.about-us-block__video {
+.about-us-block__icon-container {
+  margin: 0 auto;
+  width: 108px;
   height: 108px;
-  margin-bottom: 20px;
 }
 
 .about-us-block__title {

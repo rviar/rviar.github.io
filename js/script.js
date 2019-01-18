@@ -209,6 +209,35 @@
     }
 
     /**
+     * Lottie (bodymovin) part
+     * Initialize icons
+     */
+
+    var passionIcon = lottie.loadAnimation({
+      container: document.getElementById('about-us-icon-passion'),
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
+      path: '/lottie/passion.json'
+    });
+
+    var experienceIcon = lottie.loadAnimation({
+      container: document.getElementById('about-us-icon-experience'),
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
+      path: '/lottie/experience.json'
+    });
+
+    var knowledgeIcon = lottie.loadAnimation({
+      container: document.getElementById('about-us-icon-knowledge'),
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
+      path: '/lottie/knowledge.json'
+    });
+
+    /**
      * waypoint part
      */
 
@@ -239,8 +268,7 @@
           $('#about-us p')[item].classList.add('fadeInUp');
           if (!timeoutAboutUs_0) {
             timeoutAboutUs_0 = setTimeout(function () {
-              document.getElementById('about-us-video-' + item).play();
-              document.getElementById('about-us-retina-video-' + item).play();
+              passionIcon.play();
             }, 0);
           }
           break;
@@ -249,8 +277,7 @@
           $('#about-us p')[item].classList.add('fadeInUp');
           if (!timeoutAboutUs_1) {
             timeoutAboutUs_1 = setTimeout(function () {
-              document.getElementById('about-us-video-' + item).play();
-              document.getElementById('about-us-retina-video-' + item).play();
+              experienceIcon.play();
             }, 1000);
           }
           break;
@@ -259,8 +286,7 @@
           $('#about-us p')[item].classList.add('fadeInUp');
           if (!timeoutAboutUs_2) {
             timeoutAboutUs_2 = setTimeout(function () {
-              document.getElementById('about-us-video-' + item).play();
-              document.getElementById('about-us-retina-video-' + item).play();
+              knowledgeIcon.play();
             }, 3000);
           }
           break;
