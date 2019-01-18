@@ -175,12 +175,14 @@
     _sidenavToggleHandler(sidenavToggler);
 
     function _scrollTo(target, speed) {
-      $('html, body').stop(true, true).animate({
-        scrollTop: $(target).offset().top - $('.header').outerHeight(),
-      }, speed || 1000);
+      if (target) {
+        $('html, body').stop(true, true).animate({
+          scrollTop: $(target).offset().top - $('.header').outerHeight(),
+        }, speed || 1000);
 
-      // remove hash
-      window.location.hash = '';
+        // remove hash
+        window.location.hash = '';
+      }
     }
 
     $('.header__item, .footer-block__item').click(function () {
