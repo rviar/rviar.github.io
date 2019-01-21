@@ -235,28 +235,28 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
 
 .augmented-reality__img {
   margin-top: 34px;
-  background-image: url("../img/Augmented_Reality@1X.png");
+  background-image: url("../img/Augmented_Reality@1x.png");
 }
 
 .image-processing__img {
-  background-image: url("../img/Image_processing@1X.png");
+  background-image: url("../img/Image_processing@1x.png");
 }
 
 .custom-design__img {
-  background-image: url("../img/Custom_design@1X.png");
+  background-image: url("../img/Custom_design@1x.png");
 }
 
 .neural-networks__img {
   margin-top: 30px;
-  background-image: url("../img/Neural_networks@1X.png");
+  background-image: url("../img/Neural_networks@1x.png");
 }
 
 .complex-algorithms__img {
-  background-image: url("../img/Complex_algorithms@1X.png");
+  background-image: url("../img/Complex_algorithms@1x.png");
 }
 
 .native-development__img {
-  background-image: url("../img/Native_development@1X.png");
+  background-image: url("../img/Native_development@1x.png");
 }
 
 .our-expertise-block__title {
