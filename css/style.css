@@ -412,6 +412,10 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
   font-family: 'Helvetica Neue Cyr Medium';
 }
 
+.contacts-block__map {
+  margin-bottom: 15px;
+}
+
 /*footer*/
 .footer-block {
   background-color: #000 !important;
