@@ -168,7 +168,7 @@ main {
 .index__title {
   margin-bottom: 30px;
   font-family: 'Helvetica Neue Cyr Bold';
-  font-size: 44px;
+  font-size: 36px;
   text-align: center;
 }
 
@@ -226,7 +226,7 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
 }
 
 .our-expertise-block__img {
-  height: 140px;
+  height: 108px;
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain;
