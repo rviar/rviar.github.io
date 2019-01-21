@@ -49,12 +49,11 @@
     });
 
     $('.swiper-slide').click(function (e) {
-      e.preventDefault();
-
       var indexTo = $(this).index();
       var indexFrom = swiper.activeIndex;
 
       if (indexFrom !== indexTo) {
+        e.preventDefault();
         var nextSlide = function () {
           clearTimeout(timeoutCarousel);
           if (swiper.activeIndex !== indexTo) {
@@ -312,7 +311,7 @@
         $(self).css('display', 'none');
         video.addEventListener('ended', function () {
           video.pause();
-          video.currentTime = 0;
+          video.load();
           $(self).css('display', 'block');
         });
       }
