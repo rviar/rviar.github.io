@@ -305,7 +305,7 @@
     // Expertise video
 
     $('#expertise-video-play-button').on('click', function () {
-      var video = document.getElementById('expertise-video-1');
+      var video = document.getElementById('expertise-video-0');
       var self = this;
       if (video) {
         video.play();
@@ -315,6 +315,14 @@
           video.currentTime = 0;
           $(self).css('display', 'block');
         });
+      }
+    });
+
+    $('.index-video-block__frame').click(function () {
+      var video = document.getElementById('expertise-video-0');
+      if (video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2) {
+        video.pause();
+        $('#expertise-video-play-button').css('display', 'block');
       }
     });
 
