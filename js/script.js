@@ -301,7 +301,9 @@
       $('#expertise .our-expertise-block__info')[right].classList.add('fadeInRight');
     }
 
-    // Expertise video
+    /**
+     * Expertise video
+     */
 
     $('#expertise-video-play-button').on('click', function () {
       var video = document.getElementById('expertise-video-0');
@@ -325,7 +327,9 @@
       }
     });
 
-    // Menu underline
+    /**
+     * Menu underline
+     */
 
     function _activateUnderlineMenu() {
       var navHeight = $('.header').outerHeight();
@@ -365,6 +369,36 @@
     _activateUnderlineMenu();
 
     _scrollTo(window.location.hash, 5);
+
+    /**
+     * Contact from
+     */
+
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+
+    var validateForm = $('#contact-form').validate({
+      errorPlacement: function() {}, // disable error label
+      errorClass: 'invalid',
+      submitHandler: function(form) {
+        form.reset();
+        M.Modal.getInstance(document.getElementById('modal-submitted-form')).open();
+        // form.resetForm();
+        return false;
+      },
+      rules: {
+        name: {
+          required: true,
+        },
+        email: {
+          required: true,
+          email: true
+        },
+        message: {
+          required: true,
+        }
+      }
+    });
 
   });
 

@@ -175,24 +175,21 @@
                         <div id="about-us-icon-passion" class="about-us-block__icon-container"></div>
                     </div>
                     <a class="about-us-block__title animated slow">Passion</a>
-                    <p class="about-us-block__info animated slow">Must-have for business travelers, being available to
-                        send scans to customers even when you are out of the office.</p>
+                    <p class="about-us-block__info animated slow">More than a million users worldwide who inspire us to improve and create new features each update we work on.</p>
                 </div>
                 <div class="col s12 m6 l4 experience center-align">
                     <div class="about-us-block__video">
                         <div id="about-us-icon-experience" class="about-us-block__icon-container"></div>
                     </div>
                     <a class="about-us-block__title animated slow delay-2s">Experience</a>
-                    <p class="about-us-block__info animated slow delay-2s">Must-have for business travelers, being
-                        available to send scans to customers even when you are out of the office.</p>
+                    <p class="about-us-block__info animated slow delay-2s">Registered Google Play and App Store developer since 2012 with a focus on image processing and augmented reality.</p>
                 </div>
                 <div class="col s12 m12 l4 knowledge center-align">
                     <div class="about-us-block__video">
                         <div id="about-us-icon-knowledge" class="about-us-block__icon-container"></div>
                     </div>
                     <a class="about-us-block__title animated slow delay-4s">Knowledge</a>
-                    <p class="about-us-block__info animated slow delay-4s">Must-have for business travelers, being
-                        available to send scans to customers even when you are out of the office.</p>
+                    <p class="about-us-block__info animated slow delay-4s">Initial idea, design, prototyping, development, testing, monetization, publishing and promotion – All by our own team.</p>
                 </div>
             </div>
 
@@ -205,24 +202,21 @@
                         <div class="col s12 center-align">
                             <div class="our-expertise-block__img augmented-reality__img animated"></div>
                             <h4 class="our-expertise-block__title animated">Augmented Reality</h4>
-                            <p class="our-expertise-block__info animated">Farewell to tedious operations of scanners.Let
-                                your mobile take care of everything.</p>
+                            <p class="our-expertise-block__info animated">Interactive experience of a real-world and digital environment mixed together.</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col s12 center-align">
                             <div class="our-expertise-block__img image-processing__img animated delay-200ms"></div>
                             <h4 class="our-expertise-block__title animated delay-200ms">Image processing</h4>
-                            <p class="our-expertise-block__info animated delay-200ms">Farewell to tedious operations of
-                                scanners.Let your mobile take care of everything.</p>
+                            <p class="our-expertise-block__info animated delay-200ms">Real-time image analysis and modification, such as filtering, object detection and such.</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col s12 center-align">
                             <div class="our-expertise-block__img custom-design__img animated delay-400ms"></div>
                             <h4 class="our-expertise-block__title animated delay-400ms">Custom design</h4>
-                            <p class="our-expertise-block__info animated delay-400ms">Farewell to tedious operations of
-                                scanners.Let your mobile take care of everything.</p>
+                            <p class="our-expertise-block__info animated delay-400ms">User interface of any complexity and functionality plus image resources creation.</p>
                         </div>
                     </div>
                 </div>
@@ -238,24 +232,21 @@
                         <div class="col s12 center-align">
                             <div class="our-expertise-block__img neural-networks__img animated"></div>
                             <h4 class="our-expertise-block__title animated">Neural networks</h4>
-                            <p class="our-expertise-block__info animated">Farewell to tedious operations of scanners.Let
-                                your mobile take care of everything.</p>
+                            <p class="our-expertise-block__info animated">Approach the problem in a different way using neural networks.</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col s12 center-align">
                             <div class="our-expertise-block__img complex-algorithms__img animated delay-200ms"></div>
                             <h4 class="our-expertise-block__title animated delay-200ms">Complex algorithms</h4>
-                            <p class="our-expertise-block__info animated delay-200ms">Farewell to tedious operations of
-                                scanners.Let your mobile take care of everything.</p>
+                            <p class="our-expertise-block__info animated delay-200ms">Algorithms to solve complex tasks and their efficient code implementation.</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col s12 center-align">
                             <div class="our-expertise-block__img native-development__img animated delay-400ms"></div>
                             <h4 class="our-expertise-block__title animated delay-400ms">Native development</h4>
-                            <p class="our-expertise-block__info animated delay-400ms">Farewell to tedious operations of
-                                scanners.Let your mobile take care of everything.</p>
+                            <p class="our-expertise-block__info animated delay-400ms">Pure native Android and iOS development with a performance and app size optimization.</p>
                         </div>
                     </div>
                 </div>
@@ -267,25 +258,24 @@
             <div class="row contacts-block">
                 <h3 class="index__title">Contacts</h3>
                 <div class="col s12 l6 contacts-block__col">
-                    <form>
+                    <form id="contact-form" action="" onsubmit="return false">
                         <h4 class="contacts-block__title">SEND US A MESSAGE</h4>
 
                         <label for="name" class="col s3 contacts-block__label">Name</label>
                         <div class="col s9 contacts-block__input-block">
-                            <input id="name" type="text" class="contacts-block__input">
+                            <input id="name" name="name" type="text" class="contacts-block__input">
                         </div>
 
                         <label for="email" class="col s3 contacts-block__label">Email</label>
                         <div class="col s9 contacts-block__input-block">
-                            <input id="email" type="email" class="contacts-block__input">
+                            <input id="email" name="email" type="email" class="contacts-block__input">
                         </div>
 
                         <label for="message" class="col s3 contacts-block__label">Message</label>
                         <div class="col s9 contacts-block__input-block">
-                            <textarea id="message" class="contacts-block__textarea" rows="8"></textarea>
+                            <textarea id="message" name="message" class="contacts-block__textarea" rows="8"></textarea>
                         </div>
-
-                        <a class="btn contacts-block__btn">submit</a>
+                        <input class="btn contacts-block__btn" type="submit" value="Submit">
                     </form>
                 </div>
 
@@ -347,6 +337,16 @@
         </div>
     </footer>
 </main>
+
+<div id="modal-submitted-form" class="modal">
+    <div class="modal-content">
+        <h4 class="center-align">Thank you!</h4>
+        <h5 class="center-align">Your message has been sent!</h5>
+    </div>
+    <div class="modal-footer">
+        <a nohref class="modal-close btn-flat">Close</a>
+    </div>
+</div>
 
 <!--[if lt IE 9]>
 <script src="js/ie.min.js"></script>
