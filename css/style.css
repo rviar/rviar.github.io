@@ -491,6 +491,13 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
   display: none;
 }
 
+#modal-submitted-form {
+  top: 50% !important;
+  left: 50% !important;
+  -ms-transform: translate(-50%, -50%) scale(1) !important;
+      transform: translate(-50%, -50%) scale(1) !important;
+}
+
 .swiper-container {
   opacity: 0;
   padding: 25px 0;
