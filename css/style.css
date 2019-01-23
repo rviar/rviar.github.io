@@ -384,7 +384,9 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
   line-height: 32px !important;
   margin: 3px 9px 0 0;
   padding: 0 23px !important;
-  background-color: #45d1ff !important;
+  background-color: transparent !important;
+  color: #000 !important;
+  border: 1px solid #000 !important;
   border-radius: 7px !important;
   font-family: 'Helvetica Neue Cyr Light';
   box-shadow: none !important;
@@ -496,6 +498,44 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
   left: 50% !important;
   -ms-transform: translate(-50%, -50%) scale(1) !important;
       transform: translate(-50%, -50%) scale(1) !important;
+  border-radius: 10px;
+}
+
+.modal-content {
+  text-align: center;
+  padding: 50px;
+}
+
+.modal-close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+
+.modal-close:hover {
+  opacity: 1;
+}
+
+.modal-close:before, .modal-close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+
+.modal-close:before {
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+}
+
+.modal-close:after {
+  -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
 }
 
 .swiper-container {
