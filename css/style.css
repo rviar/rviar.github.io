@@ -495,6 +495,8 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
 }
 
 #modal-submitted-form {
+  max-width: 450px !important;
+  margin: 0 !important;
   top: 50% !important;
   left: 50% !important;
   -ms-transform: translate(-50%, -50%) scale(1) !important;
