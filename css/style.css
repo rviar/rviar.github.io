@@ -897,7 +897,7 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
     text-align: center;
   }
   .footer-block__border {
-    padding-left: calc(100% - 72px) !important;
+    padding-left: calc(100% - 85px) !important;
   }
   .policy {
     margin-top: 20px !important;
@@ -958,6 +958,9 @@ nav i, nav [class^='mdi-'], nav [class*='mdi-'], nav i.material-icons {
     left: 67%;
     border: 12px solid transparent;
     border-left: 16px solid white;
+  }
+  .footer-block__second > ul {
+    margin-left: 14px;
   }
 }
 
